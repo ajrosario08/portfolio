@@ -1,3 +1,7 @@
+body {
+    width: 100%
+}
+
 header {
     background-image: url("../img/keyboard.jpg");
     background-size: 100% 100%;
@@ -6,10 +10,53 @@ header {
     height: 100vh;
 }
 
+section article {
+    margin: 0 auto;
+    padding: 0 2em 1.5em 2em;
+}
+main section h2 {
+    text-align: center;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+main section h3 {
+    margin: 0;
+    padding-top: .4em;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+div.project-img-container {
+    width: 30%;
+    float: left;
+    padding-right: 3em;
+}
+
+div.project-content-container {
+    width: 60%;
+    float: left;
+}
+
+
 header h1 {
     color: white;
 }
 
-main {
-    width: 100%;
+img {
+    max-width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+footer {
+    height: 150px;
+    background-color: black;
 }
