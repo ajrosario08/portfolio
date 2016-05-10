@@ -1,0 +1,134 @@
+body {
+    width: 100%
+}
+
+header {
+    background-image: url("../img/keyboard.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+header h1 {
+    padding-top: 4em;
+    letter-spacing: .5em;
+}
+
+header h2 {
+    padding-top: 2em;
+    letter-spacing: .4em;
+}
+
+nav {
+    text-align: center;
+    padding-top: 2em;
+}
+
+nav ul {
+    height: 2em;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: .9em;
+    width: 340px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+}
+
+nav ul li {
+    display: inline;
+    padding-right: 3em;
+}
+nav ul li:first-child {
+    padding-left: .1em;
+}
+nav ul li:last-child {
+    padding-right: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+div.header-profile-pic {
+    padding-top: 4em;
+}
+
+div.header-profile-pic img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+
+section article {
+    margin: 0 auto;
+    padding: 0 2em 1.5em 2em;
+}
+main section h2 {
+    text-align: center;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+main section h3 {
+    margin: 0;
+    padding-top: .4em;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+div.project-img-container {
+    width: 30%;
+    float: left;
+    padding-right: 3em;
+}
+
+div.project-content-container {
+    width: 60%;
+    float: left;
+}
+
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+article img {
+    max-width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+footer {
+    height: 150px;
+    background-color: black;
+    text-align: center;
+    font-size: 2em;
+}
+
+footer i {
+    padding-top: 60px;
+    color: white;
+}
+
+footer p {
+    color: white;
+    font-size: .5em;
+}
+ footer i:hover {
+    color: #2da6ed;
+}
