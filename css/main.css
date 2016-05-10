@@ -1,5 +1,4 @@
 header {
-    background-color: #F1F1F1;
     background-image: url("../img/keyboard.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -9,4 +8,8 @@ header {
 
 header h1 {
     color: white;
+}
+
+main {
+    width: 100%;
 }
