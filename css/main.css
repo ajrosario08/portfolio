@@ -78,6 +78,10 @@ div.header-profile-pic img {
      height: 0;
 }
 
+article.template {
+  display: none;
+}
+
 footer {
     height: 150px;
     background-color: black;
