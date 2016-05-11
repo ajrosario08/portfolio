@@ -1,0 +1,39 @@
+article.template {
+  display: none;
+}
+
+#projects {
+  padding: 0 1em;
+}
+
+#projects > h1 {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 3em;
+  padding-bottom: .5em;
+}
+
+.pageBreak {
+  border-bottom: 1px solid lightgrey;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#projects article  {
+  text-align: center;
+}
+#projects article h1 {
+  padding-top: 1em;
+  padding-bottom: .5em;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+.project-description {
+  padding-bottom: 1em;
+  line-height: 1.3em;
+}
+
+.byline {
+  padding-bottom: 1em;
+}
