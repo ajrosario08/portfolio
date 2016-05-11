@@ -3,7 +3,7 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-header {
+#pageheader {
     background-image: url("../img/keyboard.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -12,12 +12,14 @@ header {
     text-align: center;
     color: white;
 }
-header h1 {
+#pageheader h1 {
     padding-top: 2em;
     letter-spacing: .4em;
+    color: white;
+    margin: 0;
 }
 
-header h2 {
+#pageheader h2 {
     padding-top: 1.5em;
     letter-spacing: .4em;
 }
@@ -33,7 +35,7 @@ nav ul {
     padding: 0;
     padding-top: .9em;
     background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
 }
 
@@ -58,29 +60,12 @@ div.header-profile-pic {
     padding-top: 3em;
 }
 
-div.header-profile-pic img{
+div.header-profile-pic img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 1px solid white;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-
-
-section article {
-    margin: 0 auto;
-    padding: 0 2em 1.5em 2em;
-}
-main section h2 {
-    text-align: center;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-}
-
-main section h3 {
-    margin: 0;
-    padding-top: .4em;
 }
 
 .clearfix:after {
@@ -91,33 +76,6 @@ main section h3 {
      clear: both;
      height: 0;
 }
-
-div.project-img-container {
-    width: 30%;
-    float: left;
-    padding-right: 3em;
-    display: inline-block;
-}
-
-div.project-content-container {
-    width: 60%;
-    float: left;
-    display: inline-block;
-}
-
-
-header h1 {
-    color: white;
-    margin: 0;
-}
-
-article img {
-    max-width: 100%;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-
-
 
 footer {
     height: 150px;

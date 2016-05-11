@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="vendor/css/reset.css">
-    <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/main.css">
-    <title>Anthony Rosario - Web Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vendor/css/reset.css">
+  <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css">
+  <title>Anthony Rosario - Web Developer</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#footer">Github</a></li>
-            </ul>
-        </nav>
-        <h1>Anthony Rosario</h1>
-        <div class="header-profile-pic">
-            <img src="img/profilePic.png" alt="profile picture" />
-        </div>
-        <h2>Web Developer</h2>
-    </header>
-    <main>
-        <section id="projects">
-            <h2>Projects</h2>
-            <article class="project-1 clearfix">
-                <h3>CodeStainz Notes</h3>
-                <div class="project-img-container">
-                    <img src="img/codeStainzNotes.png" alt="CodeStainz Notes" />
-                </div>
-                <div class="project-content-container">
-                    <p>This project was a simple notes applicaton. It makes use of HTML, CSS, Javascript, LocalStorage, and JSON.  This application uses a html form to collect notes from the user and display them on screen.  The notes are then saved in local storage and they are retrievable even after the browser has been closed.</p>
-                    <a href="https://github.com/ajrosario08/codeStainzNotes">Checkout project here</a>
-                </div>
-            </article>
-            <article class="project-2 clearfix">
-                <h3>Portfolio</h3>
-                <div class="project-img-container">
-                    <img src="img/portfolioSite.png" alt="CodeStainz Notes" />
-                </div>
-                <div class="project-content-container">
-                    <p>This project was my first portfolio site.  It was created in the rails environment.  This project demonstrates the use of MVC: Model, View, Controller.  The site has a database for previous projects and blog post which is iterated through by the controller and displayed by the view.</p>
-                    <a href="https://github.com/ajrosario08/rails-portfolio">Checkout project here</a>
-                </div>
-            </article>
-        </section>
-    </main>
-    <footer id="footer">
-        <a href="https://github.com/ajrosario08" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-        <p>Follow me on github!</p>
-    </footer>
+  <header id="pageHeader">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#footer">Github</a></li>
+      </ul>
+    </nav>
+
+    <h1>Anthony Rosario</h1>
+
+    <div class="header-profile-pic">
+      <img src="img/profilePic.png" alt="profile picture" />
+    </div>
+
+    <h2>Web Developer</h2>
+  </header>
+
+  <main>
+    <section id="projects">
+      <h1>Projects</h1>
+
+      <article class="template">
+        <header>
+          <h1>Title</h1>
+          <div class="byline">
+            By <span>Author</span> created on <time>Created Date</time>
+          </div>
+        </header>
+        <section class="project-description"></section>
+        <a href="#">link to Source Code</a>
+      </article>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <a href="https://github.com/ajrosario08" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+    <p>Follow me on github!</p>
+  </footer>
 </body>
 </html>
