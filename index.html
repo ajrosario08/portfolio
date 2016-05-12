@@ -10,29 +10,28 @@
   <title>Anthony Rosario - Web Developer</title>
 </head>
 <body>
-  <header id="pageHeader">
+  <header id="pageHeader" class="clearfix">
+    <section id="headerIcon">
+        <img id="headerPic" src="img/profilePic.png" alt="profile picture" />
+          <h1>Anthony Rosario</h1>
+          <h2>Web Developer</h2>
+    </section>
+    <i class="fa fa-bars" aria-hidden="true"></i>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#">About</a></li>
+        <li data-content="projects"><a href="index.html">Home</a></li>
+        <li data-content="projects"><a href="#">Projects</a></li>
+        <li data-content="about"><a href="#">About</a></li>
         <li><a href="#footer">Github</a></li>
       </ul>
     </nav>
-
-    <h1>Anthony Rosario</h1>
-
-    <div class="header-profile-pic">
-      <img src="img/profilePic.png" alt="profile picture" />
-    </div>
-
-    <h2>Web Developer</h2>
   </header>
 
   <main>
-    <section id="projects">
-      <h1>Projects</h1>
-      <div class="pageBreak"></div>
+    <section id="projects" class="tab-content">
+      <header>
+        <h1>Projects</h1>
+      </header>
       <article class="template">
         <header>
           <h1>Title</h1>
@@ -44,6 +43,10 @@
         <a href="#" target="_blank">link to Source Code</a>
       </article>
     </section>
+    <section id="about" class="tab-content">
+      <h1>About</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi suscipit eius quaerat voluptatibus quo nobis incidunt repudiandae est, autem asperiores maxime, amet ipsa eveniet neque aut, corporis dolore accusantium officiis.</p>
+    </section>
   </main>
 
   <footer id="footer">
@@ -52,8 +55,7 @@
   </footer>
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
   <script src="js/portfolioProjects.js"></script>
-  <script src="js/project.js">
-
-  </script>
+  <script src="js/project.js"></script>
+  <script src="js/application.js"></script>
 </body>
 </html>
