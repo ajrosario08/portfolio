@@ -21,14 +21,23 @@ body {
 #headerIcon {
   float: left;
   display: inline-block;
-  width: 70%; }
+  width: 70%;
+  margin: 10px; }
+
+#headerIcon h1 {
+  margin-top: 11px;
+  margin-left: 70px;
+  margin-bottom: 5px; }
+
+#headerIcon h2 {
+  margin-left: 70px; }
 
 .pull-left {
   float: left; }
 
 img#headerPic {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   float: left;
   border: 1px solid white; }
@@ -38,14 +47,16 @@ img#headerPic {
   padding: .4em;
   border-radius: .1em;
   font-size: 30px;
-  border: 1px solid white; }
+  border: 1px solid white;
+  margin: 10px; }
   #pageHeader i:hover {
-    color: transparent;
+    color: black;
     background-color: white; }
 
 nav {
   text-align: center;
-  clear: both; }
+  clear: both;
+  display: none; }
 
 nav ul {
   height: 2em;
@@ -118,12 +129,18 @@ article.template {
 .byline {
   padding-bottom: 1em; }
 
+.show {
+  display: block; }
+
 @media screen and (min-width: 640px) {
   .project-description {
     width: 50%;
     margin: 0 auto; }
 
   #pageHeader i {
-    display: none; } }
+    display: none; }
+
+  #pageHeader nav {
+    display: block; } }
 
 /*# sourceMappingURL=application.css.map */

@@ -19,13 +19,18 @@
 #headerIcon {
   float: left;
   display: inline-block;
-  width: 70%
-}
-#pageHeader h1 {
+  width: 70%;
+  margin: 10px;
 }
 
-#pageHeader h2 {
+#headerIcon h1 {
+  margin-top: 11px;
+  margin-left: 70px;
+  margin-bottom: 5px
+}
 
+#headerIcon h2 {
+  margin-left: 70px;
 }
 
 .pull-left {
@@ -33,8 +38,8 @@
 }
 
 img#headerPic {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   float: left;
   border: 1px solid white;
@@ -46,8 +51,9 @@ img#headerPic {
   border-radius: .1em;
   font-size: 30px;
   border: 1px solid white;
+  margin: 10px;
   &:hover {
-    color: transparent;
+    color: black;
     background-color: white;
 
   }
