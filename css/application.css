@@ -142,5 +142,7 @@ article.template {
 
   #pageHeader nav {
     display: block; } }
+#about {
+  display: none; }
 
 /*# sourceMappingURL=application.css.map */
