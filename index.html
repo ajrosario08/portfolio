@@ -7,6 +7,18 @@
   <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/application.css">
+  <script id="project-template" type="text/x-handlebars-template">
+    <article>
+      <header>
+        <h1>{{title}}</h1>
+        <div class="byline">
+          Created by <span>{{author}}</span> on <time>{{created}}</time>
+        </div>
+      </header>
+      <section class="project-description">{{description}}</section>
+      <a href="#{{link}}" target="_blank">Github Source Code</a>
+    </article>
+  </script>
   <title>Anthony Rosario - Web Developer</title>
 </head>
 <body>
@@ -32,16 +44,6 @@
       <header>
         <h1>Projects</h1>
       </header>
-      <article class="template">
-        <header>
-          <h1>Title</h1>
-          <div class="byline">
-            Created by <span>Author</span> on <time>Created Date</time>
-          </div>
-        </header>
-        <section class="project-description"></section>
-        <a href="#" target="_blank">link to Source Code</a>
-      </article>
     </section>
     <section id="about" class="tab-content">
       <h1>About</h1>
@@ -54,8 +56,8 @@
     <p>Follow me on github!</p>
   </footer>
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
-  <script src="js/portfolioProjects.js"></script>
-  <script src="js/project.js"></script>
-  <script src="js/projectsView.js"></script>
+  <script src="js/projects/portfolioProjects.js"></script>
+  <script src="js/projects/project.js"></script>
+  <script src="js/projects/projectsView.js"></script>
 </body>
 </html>
