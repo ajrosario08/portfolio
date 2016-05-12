@@ -3,9 +3,9 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-@import "page-header";
-@import "page-nav";
-@import "footer";
+@import "layout/page-header";
+@import "module/page-nav";
+@import "layout/footer";
 @import "project-template";
-@import "larger-screens";
+@import "module/larger-screens";
 @import "about";
