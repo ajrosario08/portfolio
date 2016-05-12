@@ -8,7 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/application.css">
   <script id="project-template" type="text/x-handlebars-template">
-    <article>
+    <article data-type="{{type}}">
       <header>
         <h1>{{title}}</h1>
         <div class="byline">
@@ -45,11 +45,12 @@
         <h1>Projects</h1>
       </header>
       <div id="projects-filters">
-
+          <button type="button" id="show-filters">Show filter</button>
           <ul>
             <li>
               <select id="type-filter">
                 <option value="">-- Filter by type --</option>
+                <option value="show-all">Show all</option>
               </select>
             </li>
           </ul>

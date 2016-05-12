@@ -11,6 +11,19 @@ pageViewController.toggleMoblieMenu = function() {
   });
 };
 
+pageViewController.toggleProjectsFilter = function() {
+  $('#show-filters').on('click',function(){
+    if ($(this).text() === 'Show filter') {
+      $('#projects-filters ul').show();
+      $(this).text('Hide filter');
+    } else {
+      $('#projects-filters ul').hide();
+      $(this).text('Show filter');
+    }
+  });
+};
+
 $(function(){
   pageViewController.toggleMoblieMenu();
+  pageViewController.toggleProjectsFilter();
 });
