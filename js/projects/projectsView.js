@@ -1,14 +1,5 @@
 var projectsView = {};
 
-$('#pageHeader i').on('click', function(){
-
-  if ($('#pageHeader nav').css('display') === 'none') {
-    $('#pageHeader nav').show();
-  } else {
-    $('#pageHeader nav').hide();
-  }
-});
-
 projectsView.handleMainNav = function() {
 
   $('#pageHeader nav').on('click', 'li', function(){
@@ -26,5 +17,5 @@ projectsView.handleMainNav = function() {
 };
 
 $(document).ready(function(){
-    projectsView.handleMainNav();
+  projectsView.handleMainNav();
 });
