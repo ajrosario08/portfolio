@@ -7,6 +7,19 @@
   <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/application.css">
+  <script id="project-template" type="text/x-handlebars-template">
+    <article data-type="{{type}}">
+      <img id="project-img" src="{{image}}" alt="{{imageAlt}}">
+      <header>
+        <h1>{{title}}</h1>
+        <div class="byline">
+          Created by <span>{{author}}</span> on <time>{{created}}</time>
+        </div>
+      </header>
+      <section class="project-description">{{{description}}}</section>
+      <a href="{{link}}" target="_blank">Github Source Code</a>
+    </article>
+  </script>
   <title>Anthony Rosario - Web Developer</title>
 </head>
 <body>
@@ -31,18 +44,20 @@
     <section id="projects" class="tab-content">
       <header>
         <h1>Projects</h1>
-      </header>
-      <article class="template">
-        <header>
-          <h1>Title</h1>
-          <div class="byline">
-            Created by <span>Author</span> on <time>Created Date</time>
+        <div id="projects-filters">
+            <button type="button" id="show-filters">Show filter</button>
+            <ul>
+              <li>
+                <select id="type-filter">
+                  <option value="">-- Filter by type --</option>
+                  <option value="show-all">Show all</option>
+                </select>
+              </li>
+            </ul>
           </div>
         </header>
-        <section class="project-description"></section>
-        <a href="#" target="_blank">link to Source Code</a>
-      </article>
     </section>
+
     <section id="about" class="tab-content">
       <h1>About</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi suscipit eius quaerat voluptatibus quo nobis incidunt repudiandae est, autem asperiores maxime, amet ipsa eveniet neque aut, corporis dolore accusantium officiis.</p>
@@ -54,8 +69,10 @@
     <p>Follow me on github!</p>
   </footer>
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
-  <script src="js/portfolioProjects.js"></script>
-  <script src="js/project.js"></script>
-  <script src="js/projectsView.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script src="js/projects/portfolioProjects.js"></script>
+  <script src="js/projects/project.js"></script>
+  <script src="js/projects/projectsView.js"></script>
+  <script src="js/pageController.js"></script>
 </body>
 </html>

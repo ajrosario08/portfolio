@@ -1,24 +1,18 @@
-article.template {
-  display: none;
-}
-
 #projects {
   padding: 0 1em;
 }
 
 #projects > h1 {
   text-align: center;
-  padding-top: 1em;
-  font-size: 3em;
-  padding-bottom: .5em;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #projects article  {
   text-align: center;
 }
 #projects article h1 {
-  padding-top: 1em;
-  padding-bottom: .5em;
+  margin-top: 20px;
   font-weight: bold;
   font-size: 1.8em;
 }
@@ -34,4 +28,29 @@ article.template {
 
 .show {
   display: block;
+}
+
+#projects-filters ul {
+  display: none;
+}
+
+.project-description a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+  &:hover {
+    color: blue;
+  }
+}
+
+.project-description span.less {
+  display: none;
+}
+
+#project-img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
 }

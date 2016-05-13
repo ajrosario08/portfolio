@@ -1,13 +1,35 @@
 var projectsView = {};
 
-$('#pageHeader i').on('click', function(){
+projectsView.populateProjectsFilter = function() {
+  $('article').each(function() {
+    var val = $(this).attr('data-type');
+    var optionTag = '<option value="' + val + '">' + val + '</option>';
 
-  if ($('#pageHeader nav').css('display') === 'none') {
-    $('#pageHeader nav').show();
-  } else {
-    $('#pageHeader nav').hide();
-  }
-});
+    if ($('#type-filter option[value="' + val + '"]').length === 0) {
+      $('#type-filter').append(optionTag);
+    }
+  });
+};
+
+projectsView.handleProjectsFilter = function() {
+  $('#type-filter').on('change', function(){
+    var $projects = $('article');
+    var $value = $(this).val();
+    if ($value === 'show-all') {
+      $projects.show();
+    } else if ($value) {
+      $projects.hide();
+      $projects.each(function(){
+        if ($(this).data('type') === $value) {
+          $(this).show();
+        }
+      });
+    } else {
+      $projects.show();
+    }
+    $('#type-filter').val('');
+  });
+};
 
 projectsView.handleMainNav = function() {
 
@@ -25,6 +47,36 @@ projectsView.handleMainNav = function() {
 
 };
 
-$(document).ready(function(){
-    projectsView.handleMainNav();
+projectsView.handleTruncatedDescription = function() {
+  var minimizedElements = $('.project-description p');
+  console.log(minimizedElements);
+  var minimizeCharacterCount = 100;
+
+  minimizedElements.each(function(){
+    var t = $(this).text();
+    if(t.length < minimizeCharacterCount ) return;
+
+    $(this).html(
+            t.slice(0,minimizeCharacterCount )+'<span>... </span><a href="#" class="more">More</a>'+
+            '<span class="less">'+ t.slice(minimizeCharacterCount ,t.length)+' <a href="#" class="less">Less</a></span>'
+        );
+  });
+
+  $('a.more', minimizedElements).click(function(event){
+    event.preventDefault();
+    $(this).hide().prev().hide();
+    $(this).next().show();
+  });
+
+  $('a.less', minimizedElements).click(function(event){
+    event.preventDefault();
+    $(this).parent().hide().prev().show().prev().show();
+  });
+};
+
+$(function(){
+  projectsView.handleMainNav();
+  projectsView.populateProjectsFilter();
+  projectsView.handleProjectsFilter();
+  projectsView.handleTruncatedDescription();
 });

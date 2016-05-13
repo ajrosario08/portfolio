@@ -3,6 +3,9 @@ var localProjects = [
     title: 'CodeStainz Notes',
     author: 'Anthony Rosario',
     created: 'Apr 7, 2016',
+    image: 'img/codeStainzNotes.png',
+    imageAlt: 'Code Stainz Notes',
+    type: 'Web',
     link: 'https://github.com/ajrosario08/codeStainzNotes',
     description: '<p>This project was a simple notes applicaton. It makes use of HTML, CSS, Javascript, LocalStorage, and JSON.  This application uses a html form to collect notes from the user and display them on screen.  The notes are then saved in local storage and they are retrievable even after the browser has been closed.</p>'
   },
@@ -10,6 +13,9 @@ var localProjects = [
     title: 'Ruby Portfolio',
     author: 'Anthony Rosario',
     created: 'Mar 7, 2016',
+    image: 'img/portfolioSite.png',
+    imageAlt: 'Portfolio Site',
+    type: 'Rails',
     link: 'https://github.com/ajrosario08/rails-portfolio',
     description: '<p>This project was my first portfolio site.  It was created in the rails environment.  This project demonstrates the use of MVC: Model, View, Controller.  The site has a database for previous projects and blog post which is iterated through by the controller and displayed by the view.</p>'
   },
@@ -17,6 +23,9 @@ var localProjects = [
     title: 'Psychologist App',
     author: 'Anthony Rosario',
     created: 'Nov 2, 2015',
+    image: 'img/iosApp.png',
+    imageAlt: 'iOS App',
+    type: 'iOS',
     link: 'https://github.com/ajrosario08/Psychologist',
     description: '<p>This app was built by following along on the itunesU class Stanford cs193p lecture 7. The Psychologist app takes a previously build application and embeds it into a splitView controller as its detail view. This app demonstrates the use of multiple MVC and segues. The MVC\'s are embedded in navigation controllers inside of split view controllers. This will allow the app to be able to run on both the iphone and the ipad.</p>'
   }

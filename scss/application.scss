@@ -1,11 +1,9 @@
-body {
-    width: 100%;
-    font-family: 'Raleway', sans-serif;
-}
-
 @import "layout/page-header";
 @import "module/page-nav";
 @import "layout/page-footer";
 @import "module/projects/project-template";
 @import "module/larger-screens";
 @import "module/about";
+@import "base/base.scss";
+@import "layout/page-main.scss";
+@import "module/section-projects";
