@@ -138,6 +138,13 @@ footer i:hover {
 .project-description span.less {
   display: none; }
 
+#project-img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 20px; }
+
 @media screen and (min-width: 640px) {
   .project-description {
     width: 50%;
@@ -165,5 +172,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%; }
+
+main {
+  margin-bottom: 170px; }
 
 /*# sourceMappingURL=application.css.map */
