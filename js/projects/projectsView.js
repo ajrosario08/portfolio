@@ -47,8 +47,36 @@ projectsView.handleMainNav = function() {
 
 };
 
+projectsView.handleTruncatedDescription = function() {
+  var minimizedElements = $('.project-description p');
+  console.log(minimizedElements);
+  var minimizeCharacterCount = 100;
+
+  minimizedElements.each(function(){
+    var t = $(this).text();
+    if(t.length < minimizeCharacterCount ) return;
+
+    $(this).html(
+            t.slice(0,minimizeCharacterCount )+'<span>... </span><a href="#" class="more">More</a>'+
+            '<span class="less">'+ t.slice(minimizeCharacterCount ,t.length)+' <a href="#" class="less">Less</a></span>'
+        );
+  });
+
+  $('a.more', minimizedElements).click(function(event){
+    event.preventDefault();
+    $(this).hide().prev().hide();
+    $(this).next().show();
+  });
+
+  $('a.less', minimizedElements).click(function(event){
+    event.preventDefault();
+    $(this).parent().hide().prev().show().prev().show();
+  });
+};
+
 $(function(){
   projectsView.handleMainNav();
   projectsView.populateProjectsFilter();
   projectsView.handleProjectsFilter();
+  projectsView.handleTruncatedDescription();
 });

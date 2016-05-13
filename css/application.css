@@ -97,9 +97,6 @@ footer p {
 footer i:hover {
   color: #2da6ed; }
 
-article.template {
-  display: none; }
-
 #projects {
   padding: 0 1em; }
 
@@ -129,6 +126,16 @@ article.template {
   display: block; }
 
 #projects-filters ul {
+  display: none; }
+
+.project-description a {
+  text-decoration: none;
+  color: black;
+  font-style: italic; }
+  .project-description a:hover {
+    color: blue; }
+
+.project-description span.less {
   display: none; }
 
 @media screen and (min-width: 640px) {
