@@ -2,7 +2,7 @@
   width: 240px;
   height: 100%;
   position: fixed;
-  background: #2C3540;
+  background: $mediumDark;
   display: inline-block;
   left: -240px;
   top: 0;
@@ -18,13 +18,12 @@
   text-decoration: none;
   display: block;
   padding: 15px 0;
-  border-bottom: 1px solid #BFBBB8;
-  color: #BFBBB8;
+  border-bottom: 1px solid $light;
+  color: $light;
 }
 
 #page-nav a:hover {
-  background: #435C73;
-  color: #2C3540;
+  color: $mediumLight;
 }
 
 #page-nav li:last-child a {

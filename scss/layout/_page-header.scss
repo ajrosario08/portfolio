@@ -4,8 +4,8 @@
     left: 0;
     top: 0;
     height: 80px;
-    background-color: #1C1F26;
-    color: #BFBBB8;
+    background-color: $dark;
+    color: $light;
     box-shadow: -1px 3px 6px #13140F;
 }
 
@@ -22,7 +22,7 @@
 }
 
 #pageHeader i {
-  color: #BFBBB8;
+  color: $light;
   position: absolute;
   padding: .4em;
   right: 0;
@@ -31,11 +31,11 @@
   font-size: 30px;
   margin: 10px;
   &:hover {
-    color: #77828C;
+    color: $mediumLight;
     cursor: pointer;
   }
 }
 
 #pageHeader .brand span {
-  color: #77828C;
+  color: $mediumLight;
 }
