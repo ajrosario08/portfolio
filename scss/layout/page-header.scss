@@ -1,60 +1,41 @@
 #pageHeader {
-    background-image: url("../img/keyboard.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     width: 100%;
-    min-height: 50vh;
-    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 80px;
+    background-color: #1C1F26;
+    color: #BFBBB8;
+    box-shadow: -1px 3px 6px #13140F;
 }
 
-.clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-	}
-
-#headerIcon {
-  float: left;
+#pageHeader .brand {
+  padding: 25px;
+  font-weight: bold;
+  font-size: 2em;
+  font-family: sans-serif;
   display: inline-block;
-  width: 70%;
-  margin: 10px;
 }
 
-#headerIcon h1 {
-  margin-top: 11px;
-  margin-left: 70px;
-  margin-bottom: 5px
-}
-
-#headerIcon h2 {
-  margin-left: 70px;
-}
-
-.pull-left {
-  float: left;
-}
-
-img#headerPic {
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  float: left;
-  border: 1px solid white;
+#pageHeader .brand2 {
+  display: none;
 }
 
 #pageHeader i {
-  float: right;
+  color: #BFBBB8;
+  position: absolute;
   padding: .4em;
+  right: 0;
+  top: 0;
   border-radius: .1em;
   font-size: 30px;
-  border: 1px solid white;
   margin: 10px;
   &:hover {
-    color: black;
-    background-color: white;
-
+    color: #77828C;
+    cursor: pointer;
   }
+}
+
+#pageHeader .brand span {
+  color: #77828C;
 }

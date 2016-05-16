@@ -2,11 +2,10 @@ var pageViewController = {};
 
 pageViewController.toggleMoblieMenu = function() {
   $('#pageHeader i').on('click', function(){
-
-    if ($('#pageHeader nav').css('display') === 'none') {
-      $('#pageHeader nav').show();
+    if ($('#page-nav').css('left') === '-240px' ) {
+      $('#page-nav').css('left', 0);
     } else {
-      $('#pageHeader nav').hide();
+      $('#page-nav').css('left', '-240px');
     }
   });
 };

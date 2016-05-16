@@ -1,3 +1,9 @@
+$dark: #1C1F26;
+$mediumDark: #2C3540;
+$medium: #435C73;
+$mediumLight: #77828C;
+$light: #BFBBB8;
+
 @import "layout/page-header";
 @import "module/page-nav";
 @import "layout/page-footer";
@@ -5,5 +11,6 @@
 @import "module/larger-screens";
 @import "module/about";
 @import "base/base.scss";
-@import "layout/page-main.scss";
+@import "layout/page-main";
 @import "module/section-projects";
+@import "module/hero";

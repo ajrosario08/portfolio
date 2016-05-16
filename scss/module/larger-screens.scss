@@ -7,7 +7,26 @@
     display: none;
   }
 
-  #pageHeader nav {
-    display: block;
+  #page-nav {
+    position: static;
+    background: none;
+    width: auto;
+  }
+
+  #page-nav ul li {
+    display: inline-block;
+    padding-right: 20px;
+  }
+
+  #page-nav a {
+    border-bottom: none;
+  }
+
+  #pageHeader .brand2 {
+    display: inline-block;
+  }
+
+  #pageHeader .brand1 {
+    display: none;
   }
 }
