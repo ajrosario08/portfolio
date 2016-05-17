@@ -17,20 +17,35 @@
     });
   };
 
-  Project.fetchAll = function() {
+  Project.fetchAll = function(next) {
     if (localStorage.portfolioProjects) {
-      Project.processData(JSON.parse(localStorage.portfolioProjects));
-    } else {
-      $.getJSON('data/portfolioProjects.json', function(data) {
-        Project.processData(data);
+      debugger;
+      $.ajax({
+        type: 'HEAD',
+        url: 'data/portfolioProjects.json',
+        success: function(data, message, xhr) {
+          var eTag = xhr.getResponseHeader('eTag');
+          if (!localStorage.eTag || eTag !== localStorage.eTag) {
+            localStorage.eTag = eTag;
+            Project.getAll(next);
+          } else {
+            Project.loadAll(JSON.parse(localStorage.portfolioProjects));
+            next();
+          }
+        }
       });
+    } else {
+      Project.getAll(next);
     }
   };
 
-  Project.processData = function(data) {
-    Project.loadAll(data);
-    localStorage.setItem('portfolioProjects', JSON.stringify(data));
-    projectsView.initIndexPage();
+  Project.getAll = function(next) {
+    $.getJSON('data/portfolioProjects.json', function(data) {
+      Project.loadAll(data);
+      localStorage.setItem('portfolioProjects', JSON.stringify(data));
+      next();
+    });
+
   };
 
   module.Project = Project;
