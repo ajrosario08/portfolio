@@ -9,10 +9,8 @@ Project.prototype.toHtml = function (template) {
   return template(this);
 };
 
-localProjects.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
-
-projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
-});
+Project.loadAll = function(dataWePassIn) {
+  dataWePassIn.forEach(function(ele) {
+    Project.all.push(new Project(ele));
+  });
+};
