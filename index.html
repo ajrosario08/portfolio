@@ -20,7 +20,7 @@
       <a href="{{link}}" target="_blank">Github Source Code</a>
     </article>
   </script>
-  <script id="category-filter-template" type="text/x-handlebars-template">
+  <script id="type-filter-template" type="text/x-handlebars-template">
       <option value="{{type}}">{{type}}</option>
   </script>
   <title>Anthony Rosario - Web Developer</title>
@@ -75,10 +75,12 @@
   </footer>
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-  <!-- <script src="js/projects/portfolioProjects.js"></script>
-  <script src="js/projects/project.js"></script>
+  <!-- <script src="js/projects/project.js"></script>
   <script src="js/projects/projectsView.js"></script>
   <script src="js/pageController.js"></script> -->
   <script src="js/app.min.js"></script>
+  <script type="text/javascript">
+    Project.fetchAll();
+  </script>
 </body>
 </html>
