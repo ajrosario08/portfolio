@@ -1,13 +1,12 @@
-var projects = [];
-
 function Project (opts) {
   for (key in opts) this[key] = opts[key];
 }
 
-Project.prototype.toHtml = function () {
-  var template = $('#project-template').html();
-  var source = Handlebars.compile(template);
-  return source(this);
+Project.all = [];
+
+Project.prototype.toHtml = function (template) {
+  var template = Handlebars.compile($(template).html());
+  return template(this);
 };
 
 localProjects.forEach(function(ele) {
