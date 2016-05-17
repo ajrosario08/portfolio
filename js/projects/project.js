@@ -1,19 +1,32 @@
-var projects = [];
-
 function Project (opts) {
   for (key in opts) this[key] = opts[key];
 }
 
-Project.prototype.toHtml = function () {
-  var template = $('#project-template').html();
-  var source = Handlebars.compile(template);
-  return source(this);
+Project.all = [];
+
+Project.prototype.toHtml = function (template) {
+  var template = Handlebars.compile((template).html());
+  return template(this);
 };
 
-localProjects.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
+Project.loadAll = function(dataWePassIn) {
+  dataWePassIn.forEach(function(ele) {
+    Project.all.push(new Project(ele));
+  });
+};
 
-projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
-});
+Project.fetchAll = function() {
+  if (localStorage.portfolioProjects) {
+    Project.processData(JSON.parse(localStorage.portfolioProjects));
+  } else {
+    $.getJSON('data/portfolioProjects.json', function(data) {
+      Project.processData(data);
+    });
+  }
+};
+
+Project.processData = function(data) {
+  Project.loadAll(data);
+  localStorage.setItem('portfolioProjects', JSON.stringify(data));
+  projectsView.initIndexPage();
+};

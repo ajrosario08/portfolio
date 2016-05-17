@@ -20,6 +20,9 @@
       <a href="{{link}}" target="_blank">Github Source Code</a>
     </article>
   </script>
+  <script id="type-filter-template" type="text/x-handlebars-template">
+      <option value="{{type}}">{{type}}</option>
+  </script>
   <title>Anthony Rosario - Web Developer</title>
 </head>
 <body>
@@ -30,7 +33,7 @@
     <nav id="page-nav">
       <ul>
         <li data-content="projects"><a href="index.html">Home</a></li>
-        <li data-content="projects"><a href="#">Projects</a></li>
+        <li data-content="projects"><a href="#">Portfolio</a></li>
         <li data-content="about"><a href="#">About</a></li>
         <li><a href="#footer">Github</a></li>
       </ul>
@@ -38,7 +41,9 @@
   <i class="fa fa-bars" aria-hidden="true"></i>
   </header>
 
-  <div id="hero"></div>
+  <div id="hero">
+    <img id="hero-image" src="img/keyboard.jpg" alt="keyboard Image" />
+  </div>
 
   <main>
     <section id="projects" class="tab-content">
@@ -70,10 +75,12 @@
   </footer>
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-  <!-- <script src="js/projects/portfolioProjects.js"></script>
-  <script src="js/projects/project.js"></script>
+  <!-- <script src="js/projects/project.js"></script>
   <script src="js/projects/projectsView.js"></script>
   <script src="js/pageController.js"></script> -->
   <script src="js/app.min.js"></script>
+  <script type="text/javascript">
+    Project.fetchAll();
+  </script>
 </body>
 </html>

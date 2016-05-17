@@ -26,69 +26,39 @@ $(function(){
   pageViewController.toggleMoblieMenu();
   pageViewController.toggleProjectsFilter();
 });
-var localProjects = [
-  {
-    title: 'CodeStainz Notes',
-    author: 'Anthony Rosario',
-    created: 'Apr 7, 2016',
-    image: 'img/codeStainzNotes.png',
-    imageAlt: 'Code Stainz Notes',
-    type: 'Web',
-    link: 'https://github.com/ajrosario08/codeStainzNotes',
-    description: '<p>This project was a simple notes applicaton. It makes use of HTML, CSS, Javascript, LocalStorage, and JSON.  This application uses a html form to collect notes from the user and display them on screen.  The notes are then saved in local storage and they are retrievable even after the browser has been closed.</p>'
-  },
-  {
-    title: 'Ruby Portfolio',
-    author: 'Anthony Rosario',
-    created: 'Mar 7, 2016',
-    image: 'img/portfolioSite.png',
-    imageAlt: 'Portfolio Site',
-    type: 'Rails',
-    link: 'https://github.com/ajrosario08/rails-portfolio',
-    description: '<p>This project was my first portfolio site.  It was created in the rails environment.  This project demonstrates the use of MVC: Model, View, Controller.  The site has a database for previous projects and blog post which is iterated through by the controller and displayed by the view.</p>'
-  },
-  {
-    title: 'Psychologist App',
-    author: 'Anthony Rosario',
-    created: 'Nov 2, 2015',
-    image: 'img/iosApp.png',
-    imageAlt: 'iOS App',
-    type: 'iOS',
-    link: 'https://github.com/ajrosario08/Psychologist',
-    description: '<p>This app was built by following along on the itunesU class Stanford cs193p lecture 7. The Psychologist app takes a previously build application and embeds it into a splitView controller as its detail view. This app demonstrates the use of multiple MVC and segues. The MVC\'s are embedded in navigation controllers inside of split view controllers. This will allow the app to be able to run on both the iphone and the ipad.</p>'
-  }
-];
-var projects = [];
-
 function Project (opts) {
   for (key in opts) this[key] = opts[key];
 }
 
-Project.prototype.toHtml = function () {
-  var template = $('#project-template').html();
-  var source = Handlebars.compile(template);
-  return source(this);
+Project.all = [];
+
+Project.prototype.toHtml = function (template) {
+  var template = Handlebars.compile((template).html());
+  return template(this);
 };
 
-localProjects.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
-
-projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
-});
-var projectsView = {};
-
-projectsView.populateProjectsFilter = function() {
-  $('article').each(function() {
-    var val = $(this).attr('data-type');
-    var optionTag = '<option value="' + val + '">' + val + '</option>';
-
-    if ($('#type-filter option[value="' + val + '"]').length === 0) {
-      $('#type-filter').append(optionTag);
-    }
+Project.loadAll = function(dataWePassIn) {
+  dataWePassIn.forEach(function(ele) {
+    Project.all.push(new Project(ele));
   });
 };
+
+Project.fetchAll = function() {
+  if (localStorage.portfolioProjects) {
+    Project.processData(JSON.parse(localStorage.portfolioProjects));
+  } else {
+    $.getJSON('data/portfolioProjects.json', function(data) {
+      Project.processData(data);
+    });
+  }
+};
+
+Project.processData = function(data) {
+  Project.loadAll(data);
+  localStorage.setItem('portfolioProjects', JSON.stringify(data));
+  projectsView.initIndexPage();
+};
+var projectsView = {};
 
 projectsView.handleProjectsFilter = function() {
   $('#type-filter').on('change', function(){
@@ -128,7 +98,6 @@ projectsView.handleMainNav = function() {
 
 projectsView.handleTruncatedDescription = function() {
   var minimizedElements = $('.project-description p');
-  console.log(minimizedElements);
   var minimizeCharacterCount = 100;
 
   minimizedElements.each(function(){
@@ -153,9 +122,15 @@ projectsView.handleTruncatedDescription = function() {
   });
 };
 
-$(function(){
+projectsView.initIndexPage = function() {
+  Project.all.forEach(function(a){
+    if($('#projects-filters option:contains("'+ a.category + '")').length === 0) {
+      $('#type-filter').append(a.toHtml($('#type-filter-template')));
+    };
+    $('#projects').append(a.toHtml($('#project-template')));
+
+  });
   projectsView.handleMainNav();
-  projectsView.populateProjectsFilter();
   projectsView.handleProjectsFilter();
   projectsView.handleTruncatedDescription();
-});
+};
