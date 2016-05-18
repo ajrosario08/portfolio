@@ -28,7 +28,6 @@
   pageViewController.windowResize = function(){
     $(window).resize(function(){
       $windowSize = $(window).width();
-      console.log($windowSize);
       if ($windowSize >= 640) {
         if ($(wrapper).css('right') === '240px' ){
           $('#pageHeader i').click();
