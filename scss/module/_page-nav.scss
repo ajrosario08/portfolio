@@ -1,15 +1,16 @@
 #page-nav {
+  padding-top: 50px;
   width: 240px;
   height: 100%;
   position: fixed;
   background: $mediumDark;
   display: inline-block;
-  left: -240px;
+  right: -240px;
   top: 0;
   bottom: 0;
-  -webkit-transition: left .3s ease-in-out;
-  -o-transition: left .3s ease-in-out;
-  transition: left .3s ease-in-out;
+  -webkit-transition: right .3s ease-in;
+  -o-transition: right .3s ease-in;
+  transition: right .3s ease-in;
   text-align: center;
   z-index: 3;
 }

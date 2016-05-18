@@ -3,10 +3,12 @@
 
   pageViewController.toggleMoblieMenu = function() {
     $('#pageHeader i').on('click', function(){
-      if ($('#page-nav').css('left') === '-240px' ) {
-        $('#page-nav').css('left', 0);
+      if ($('#wrapper').css('right') === '240px' ) {
+        $('#wrapper').css('right', 0);
+        $('#page-nav').css('right', '-240px');
       } else {
-        $('#page-nav').css('left', '-240px');
+        $('#wrapper').css('right', '240px');
+        $('#page-nav').css('right', '0');
       }
     });
   };
@@ -23,9 +25,22 @@
     });
   };
 
+  pageViewController.windowResize = function(){
+    $(window).resize(function(){
+      $windowSize = $(window).width();
+      console.log($windowSize);
+      if ($windowSize >= 640) {
+        if ($(wrapper).css('right') === '240px' ){
+          $('#pageHeader i').click();
+        }
+      }
+    });
+  };
+
   $(function(){
     pageViewController.toggleMoblieMenu();
     pageViewController.toggleProjectsFilter();
+    pageViewController.windowResize();
   });
 
   module.pageViewController = pageViewController;

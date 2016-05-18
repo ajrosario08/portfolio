@@ -19,7 +19,6 @@
 
   Project.fetchAll = function(next) {
     if (localStorage.portfolioProjects) {
-      debugger;
       $.ajax({
         type: 'HEAD',
         url: 'data/portfolioProjects.json',
