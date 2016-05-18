@@ -11,6 +11,7 @@
     position: static;
     background: none;
     width: auto;
+    padding-top: 0;
   }
 
   #page-nav ul li {
@@ -28,5 +29,12 @@
 
   #pageHeader .brand1 {
     display: none;
+  }
+
+  #wrapper {
+    right: 0;
+  }
+  #page-nav {
+    right: -240px;
   }
 }

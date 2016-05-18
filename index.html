@@ -26,48 +26,50 @@
   <title>Anthony Rosario - Web Developer</title>
 </head>
 <body>
-  <header id="pageHeader" class="clearfix">
-    <div class="brand1 brand">A<span>R</span></div>
-    <div class="brand2 brand">Anthony<span>Rosario</span></div>
+  <div id="wrapper">
+    <header id="pageHeader">
+      <div class="brand1 brand">A<span>R</span></div>
+      <div class="brand2 brand">Anthony<span>Rosario</span></div>
 
-    <nav id="page-nav">
-      <ul>
-        <li data-content="projects"><a href="index.html">Home</a></li>
-        <li data-content="projects"><a href="#">Portfolio</a></li>
-        <li data-content="about"><a href="#">About</a></li>
-        <li><a href="#footer">Github</a></li>
-      </ul>
-    </nav>
-  <i class="fa fa-bars" aria-hidden="true"></i>
-  </header>
+      <nav id="page-nav">
+        <ul>
+          <li data-content="projects"><a href="index.html">Home</a></li>
+          <li data-content="projects"><a href="#">Portfolio</a></li>
+          <li data-content="about"><a href="#">About</a></li>
+          <li><a href="#footer">Github</a></li>
+        </ul>
+      </nav>
+    <i class="fa fa-bars" aria-hidden="true"></i>
+    </header>
 
-  <div id="hero">
-    <img id="hero-image" src="img/keyboard.jpg" alt="keyboard Image" />
+    <div id="hero">
+      <img id="hero-image" src="img/keyboard.jpg" alt="keyboard Image" />
+    </div>
+
+    <main>
+      <section id="projects" class="tab-content">
+        <header>
+          <h1>Projects</h1>
+          <div id="projects-filters">
+              <button type="button" id="show-filters">Show filter</button>
+              <ul>
+                <li>
+                  <select id="type-filter">
+                    <option value="">-- Filter by type --</option>
+                    <option value="show-all">Show all</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+          </header>
+      </section>
+
+      <section id="about" class="tab-content">
+        <h1>About</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi suscipit eius quaerat voluptatibus quo nobis incidunt repudiandae est, autem asperiores maxime, amet ipsa eveniet neque aut, corporis dolore accusantium officiis.</p>
+      </section>
+    </main>
   </div>
-
-  <main>
-    <section id="projects" class="tab-content">
-      <header>
-        <h1>Projects</h1>
-        <div id="projects-filters">
-            <button type="button" id="show-filters">Show filter</button>
-            <ul>
-              <li>
-                <select id="type-filter">
-                  <option value="">-- Filter by type --</option>
-                  <option value="show-all">Show all</option>
-                </select>
-              </li>
-            </ul>
-          </div>
-        </header>
-    </section>
-
-    <section id="about" class="tab-content">
-      <h1>About</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi suscipit eius quaerat voluptatibus quo nobis incidunt repudiandae est, autem asperiores maxime, amet ipsa eveniet neque aut, corporis dolore accusantium officiis.</p>
-    </section>
-  </main>
 
   <footer id="footer">
     <a href="https://github.com/ajrosario08" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
@@ -80,7 +82,7 @@
   <script src="js/pageController.js"></script> -->
   <script src="js/app.min.js"></script>
   <script type="text/javascript">
-    Project.fetchAll();
+    Project.fetchAll(projectsView.initIndexPage);
   </script>
 </body>
 </html>
