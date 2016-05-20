@@ -28,7 +28,6 @@
   pageViewController.windowResize = function(){
     $(window).resize(function(){
       $windowSize = $(window).width();
-      console.log($windowSize);
       if ($windowSize >= 640) {
         if ($(wrapper).css('right') === '240px' ){
           $('#pageHeader i').click();
@@ -144,18 +143,18 @@
       if(t.length < minimizeCharacterCount ) return;
 
       $(this).html(
-              t.slice(0,minimizeCharacterCount )+'<span>... </span><a href="#" class="read-more">Read more</a>'+
+              t.slice(0,minimizeCharacterCount )+'<span>...</span><a href="#" class="read-more">Read more</a>'+
               '<span class="less">'+ t.slice(minimizeCharacterCount ,t.length)+' <a href="#" class="read-less">Read less</a></span>'
           );
     });
 
-    $('a.read-more', minimizedElements).click(function(event){
+    $('a.read-more', minimizedElements).on('click', function(event){
       event.preventDefault();
       $(this).hide().prev().hide();
       $(this).next().show();
     });
 
-    $('a.read-less', minimizedElements).click(function(event){
+    $('a.read-less', minimizedElements).on('click', function(event){
       event.preventDefault();
       $(this).parent().hide().prev().show().prev().show();
     });
