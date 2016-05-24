@@ -1,6 +1,6 @@
 footer {
   height: 150px;
-  background-color: black;
+  background-color: $dark;
   text-align: center;
   font-size: 2em;
   margin-top: 1em;
@@ -8,14 +8,14 @@ footer {
 
 footer i {
   padding-top: 50px;
-  color: white;
+  color: $light;
 }
 
 footer p {
   padding-top: 1em;
-  color: white;
+  color:$light;
   font-size: .5em;
 }
  footer i:hover {
-  color: #2da6ed;
+  color:$medium;
 }
