@@ -7,7 +7,7 @@
     $.ajax({
       url: 'https://api.github.com/users/ajrosario08/repos' + '?per_page=10' + '&sort=updated',
       type: 'GET',
-      headers: {'Authentication': 'token ' + githubToken},
+      headers: {'Authorization': 'token ' + githubToken},
       success: function(data, message, xhr) {
         repos.all = data;
         callback();
