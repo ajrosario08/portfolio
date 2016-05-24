@@ -3,7 +3,10 @@
     height: 80px;
     background-color: $dark;
     color: $light;
-    box-shadow: -1px 3px 6px #13140F;
+    position: fixed;
+    right:0;
+    top:0;
+    transition: all .3s ease-in;
 }
 
 #pageHeader .brand {
@@ -12,7 +15,6 @@
   font-size: 2em;
   font-family: sans-serif;
   display: inline-block;
-  text-shadow: -1px 3px 6px #13140F
 }
 
 #pageHeader .brand2 {
@@ -20,7 +22,6 @@
 }
 
 #pageHeader i {
-  text-shadow: -1px 3px 6px #13140F;
   color: $light;
   position: absolute;
   padding: .4em;

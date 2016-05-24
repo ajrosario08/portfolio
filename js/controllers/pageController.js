@@ -6,9 +6,11 @@
       if ($('#wrapper').css('right') === '240px' ) {
         $('#wrapper').css('right', 0);
         $('#page-nav').css('right', '-240px');
+        $('#pageHeader').css('right',0);
       } else {
         $('#wrapper').css('right', '240px');
         $('#page-nav').css('right', '0');
+        $('#pageHeader').css('right','240px');
       }
     });
   };
