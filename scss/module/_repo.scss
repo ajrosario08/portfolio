@@ -1,0 +1,36 @@
+#github {
+  color: $dark;
+  padding: 20px;
+  h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  ul {
+    li {
+      margin: 40px 0;
+      width: 100%;
+
+      a {
+        color: $dark;
+        &:hover {
+          color: $medium;
+        }
+        h3 {
+          font-weight: bold;
+          font-size: 1.5em;
+        }
+      }
+
+      p {
+        margin-top: 20px;
+        span {
+          font-weight: bold;
+          color: $medium;
+        }
+      }
+    }
+  }
+}
