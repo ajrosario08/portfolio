@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/app.min.css">
+  <link rel="icon" type="image/png" href="img/favicon.png" />
   <script id="project-template" type="text/x-handlebars-template">
     <article data-type="{{type}}">
       <img id="project-img" src="{{image}}" alt="{{imageAlt}}">
@@ -23,6 +24,15 @@
   <script id="type-filter-template" type="text/x-handlebars-template">
       <option value="{{type}}">{{type}}</option>
   </script>
+  <script id="repo-template" type="text/x-handlebars-template">
+    <li>
+      <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+      <p><span>Description:</span> {{description}}</p>
+      <p><span>Language:</span> {{language}}</p>
+      <p><span>Created:</span> {{created_at}}</p>
+      <p><span>Last updated:</span> {{updated_on}}</p>
+    </li>
+  </script>
   <title>Anthony Rosario - Web Developer</title>
 </head>
 <body>
@@ -36,7 +46,8 @@
           <li data-content="projects"><a href="/">Home</a></li>
           <li data-content="projects"><a href="/">Portfolio</a></li>
           <li data-content="about"><a href="/about">About</a></li>
-          <li><a href="#footer">Github</a></li>
+          <li><a href="/github">Github</a></li>
+          <li data-content="about"><a href="/contact">Contact</a></li>
         </ul>
       </nav>
     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -68,20 +79,31 @@
         <h1>About</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi suscipit eius quaerat voluptatibus quo nobis incidunt repudiandae est, autem asperiores maxime, amet ipsa eveniet neque aut, corporis dolore accusantium officiis.</p>
       </section>
+      <section id="github" class="tab-content">
+        <h1>Check out my Projects on GitHub:</h1>
+          <ul>
+          </ul>
+      </section>
     </main>
+    <footer id="footer">
+      <a href="https://github.com/ajrosario08" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <p>Follow me on github!</p>
+    </footer>
   </div>
-
-  <footer id="footer">
-    <a href="https://github.com/ajrosario08" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-    <p>Follow me on github!</p>
-  </footer>
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script src="js/githubToken.js"></script>
+
   <script src="js/models/project.js"></script>
+  <script src="js/models/repo.js"></script>
+
   <script src="js/views/projectsView.js"></script>
+  <script src="js/views/repoView.js"></script>
+
   <script src="js/controllers/pageController.js"></script>
   <script src="js/controllers/aboutController.js"></script>
   <script src="js/controllers/projectController.js"></script>
+  <script src="js/controllers/githubController.js"></script>
 
   <script src="vendor/scripts/page.js"></script>
   <script src="js/controllers/routes.js"></script>
